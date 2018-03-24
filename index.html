@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ReactStrap</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+    const Jumbotron = React.createClass({
+      render(){
+        return(
+          <div>
+            <h1>Jumbotron Component</h1>
+          </div>
+        );
+      }
+    });
+
+    const NavBar = React.createClass({
+      render(){
+        return(
+          <nav className="navbar navbar-default">
+            <div className="container">
+              <div className="class-header">
+                <a className="navbar brand" href="#">ReactStrap</a>
+              </div>
+                <div id="navbar">
+                  <ul className="nav nabvar-nav">
+                    <li><a calssName="active" href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                  </ul>
+                </div>
+            </div>
+            <h1>NavBar Component</h1>
+          </nav>
+        );
+      }
+    });
+
+
+    const theme = React.createClass({
+      render(){
+        return(
+          <div>
+            <h1>page Component</h1>
+          </div>
+        );
+      }
+    });
+
+      ReactDOM.render(
+        <div>
+          <theme />
+          <NavBar />
+          <Jumbotron />
+        </div>,
+        document.getElementById('root')
+      );
+
+    </script>
+
+  </body>
+</html>
